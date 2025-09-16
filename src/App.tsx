@@ -15,36 +15,33 @@ function App() {
       <Router>
         <div className="min-h-screen bg-gray-50">
           <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/login" element={<Login />} />
-            <Route 
-              path="/dashboard" 
+            <Route path="GovtFloodRelief/" element={<LandingPage />} />
+            <Route path="GovtFloodRelief/login" element={<Login />} />
+            <Route
+              path="GovtFloodRelief/dashboard"
               element={
                 <ProtectedRoute userType="individual">
                   <Dashboard />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/donate/:district" 
+            <Route
+              path="GovtFloodRelief/donate/:district"
               element={
                 <ProtectedRoute userType="individual">
                   <DonationPage />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path="/ngo-dashboard" 
+            <Route
+              path="GovtFloodRelief/ngo-dashboard"
               element={
                 <ProtectedRoute userType="ngo">
                   <NGODashboard />
                 </ProtectedRoute>
-              } 
+              }
             />
-            <Route 
-              path='/donate'
-              element={<DonationPage/>}
-            />
+            <Route path="GovtFloodRelief/donate" element={<DonationPage />} />
           </Routes>
         </div>
       </Router>
